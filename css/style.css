@@ -1,0 +1,468 @@
+/* body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #23e3c9;
+} */
+*{
+    font-family: Arial,sans-serif;
+}
+.content{
+    margin-top:94px;
+    padding: 20px 18%;
+}
+.head-content{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.hotvpop{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.slider{
+    position: relative;
+    width: 828px;
+    height: 310px;
+    overflow: hidden;
+}
+
+.slides{
+    width: 1000%;
+    height: 310px;
+    display: flex;
+}
+.slider input{
+    display: none;
+
+}
+.slide{
+    width: 10%;
+    transition: 2s;
+}
+.slide img{
+    width: 828px;
+    height: 310px;
+}
+.navigation-manual{
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    display: none;
+    background: white;
+    border:2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+.manual-btn:hover{
+    border: 2px solid #009966;
+    background:#009966;
+}
+.manual-btn:active{
+    background: #009966;
+}
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -10%;
+}
+#radio3:checked ~ .first{
+    margin-left: -20%;
+}
+#radio4:checked ~ .first{
+    margin-left: -30%;
+}
+#radio5:checked ~ .first{
+    margin-left: -40%;
+}
+#radio6:checked ~ .first{
+    margin-left: -50%;
+}
+#radio7:checked ~ .first{
+    margin-left: -60%;
+}
+#radio8:checked ~ .first{
+    margin-left: -70%;
+}
+#radio9:checked ~ .first{
+    margin-left: -80%;
+}
+h2.name{
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+}
+.playlist{
+    position: relative;
+    width: 218px;
+    height: 218px;
+    background-color: #DDD;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8421743697478992) 0%, rgba(119,97,97,0.5704656862745099) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.3s;
+
+}
+.overlay img{
+    width: 60px;
+    transform: scale(0.5);
+    transition: all 0.3s;
+}
+.playlist:hover .overlay{
+    opacity: 1;
+}
+.playlist:hover .overlay img{
+    transform: scale(1);
+}
+ul{
+    display: block;
+    list-style-type: none;
+}
+.item-bxh{
+    width: 300px;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    align-items: center;
+    font-family: Arial,sans-serif;
+    border-bottom: 1px solid #999;
+}
+.item-bxh .info{
+    flex-grow: 1;
+}
+.item-bxh .number{
+    font-size: 20px;
+    padding: 0 8px;
+}
+.singer{
+    color: #999;
+}
+.song-title{
+    margin-bottom:8px ;
+}
+.view-count{
+    color: #999;
+    font-size: 15px;}
+.song-title{
+    font-size: 15px;
+}
+.song-title a{
+    text-decoration: none ;
+    color:#fff;
+}
+.song-title:hover a{
+    color:#009966;
+}
+.item-bxh-1{
+    width: 300px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+}
+.item-bxh-1 .bg-overlay-home{
+    width: 110px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 8px;
+}
+.bg-overlay-home .number-first{
+    font-size: 25px;
+    font-weight: bolder;
+}
+.item-bxh-1 .song-title{
+    font-size: 15px;
+    font-weight: bold;
+}
+.bg-music-video{
+    width: 410px;
+    height: 231px;
+    position: relative;
+    background-image: url('/image/musicvideo/emmoilanguoiyeuanh.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.bg-music-video:hover .overlay{
+    opacity: 1;
+}
+.bg-music-video:hover .overlay img{
+    transform: scale(1);
+}
+.duration{
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(0,0,0,0.6);
+}
+.bg-music-video-small{
+    width: 195px;
+    height: 110px;
+    position: relative;
+    background-image: url('/image/musicvideo/camotbautroithuongnho.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.bg-music-video-small:hover .overlay{
+    opacity: 1;
+}
+.bg-music-video-small:hover .overlay img{
+    transform: scale(1);
+}
+.box-content{
+    width: 840px;
+    height: 459px;
+    border-top: 1px solid #303b4a;
+    border-bottom: 1px solid #303b4a;
+    padding: 0 0;
+}
+li[class^="new-song"]{
+    width: 411.59px;
+    height: 91px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #303b4a;
+}
+.artist-list{
+    padding:0;
+    margin: 0;
+}
+li[class^="new-song"] .info{
+    margin-left: 20px;
+}
+.new-song-1{
+    float: left;
+}
+.new-song-2{
+    float: right;
+}
+.singer a{
+    text-decoration: none;
+    color: #6A8385;
+    font-size: 14px;
+}
+.singer a:hover{
+    color: #009966;
+}
+.box-content-mv{
+    width: 300px;
+    height: 501px;
+}
+.first-mv{
+    height: 169px;
+    width: 100%;
+    background-image: url('/image/mv/cohenvshanhphuc.jpeg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.first-mv-content{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+.first-mv-content .chart-stt{
+    color: white;
+    font-size: 24px;
+    margin-right: 10px;
+}
+.manual-mv{
+    height: 83px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #303b4a;
+    width: 100%;
+}
+.song-artist-avatar{
+    width: 36.67%;
+    height: 62px;
+    background-image: url("/image/mv/2.jpg");
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+}
+.chart-stt-manual{
+    height: 100%;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(0,0,0,0.6);
+}
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 270px;
+}
+.navigation-auto div{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+    margin-right: 20px;
+}
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #40D3DC;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #40D3DC;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #40D3DC;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #40D3DC;
+}
+#radio5:checked ~ .navigation-auto .auto-btn5{
+    background: #40D3DC;
+}
+#radio6:checked ~ .navigation-auto .auto-btn6{
+    background: #40D3DC;
+}
+#radio7:checked ~ .navigation-auto .auto-btn7{
+    background: #40D3DC;
+}
+#radio8:checked ~ .navigation-auto .auto-btn8{
+    background: #40D3DC;
+}
+#radio9:checked ~ .navigation-auto .auto-btn9{
+    background: #40D3DC;
+}
+.now-playlist{
+    width: 100%;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.slider-playlist{
+    display: flex;
+    width: 1000%;
+    transition: 2s;
+    margin-left: 0px;
+}
+.playlist{
+    margin-right: 25px;
+}
+.middle-content{
+    width: 100%;
+    height: 1000px;
+}
+.col1{
+    width: 71.79%;
+}
+.box-title{
+    margin-top: 30px;
+    width: 100%;
+    height: 44px;
+}
+
+.box-title .name{
+    float: left;
+    width: 10%;
+    text-align: left;
+    margin-right: 5%;
+}
+.name a{
+    color: #fff;
+}
+.btn-ty li{
+    float: left;
+    padding-top:5px ;
+}
+.pre-active{
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    padding-bottom: 3px;
+}
+.pre-active:hover{
+    color: #fff;
+}
+.next{
+    color: #6A8385;
+}
+.next:hover{
+    font-weight: bold;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    margin-right: 10px;
+    padding-bottom: 1px;
+    padding-bottom: 3px;
+}
+.btn-ty{
+    line-height: 35px;
+    
+}
+.btn-ty li a{
+    text-decoration: none;
+}
+.albums{
+    width: 195px;
+    height: 195px;
+    position: relative;
+    background-color: #fff;
+}
+.albums:hover .overlay{
+    opacity: 1;
+}
+.album-list{
+    width: 100%;
+    margin-top: 25px;
+}
+.album-detail{
+    width: 195px;
+    height: 263px;
+    float: left;
+    margin-right: 16px;
+}
+h3.title {
+    font-size: 14px;
+    color: #fff;}
+.title a{
+    color: #fff;
+    line-height: 20px;
+}
+.album-info{
+    width: 100%;
+    height: 47px;
+    margin-top: 5px;
+}
