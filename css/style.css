@@ -615,3 +615,115 @@ ul.btn-ty-country{
     color: white;
     font-size: 30px;
 }
+.artist-details{
+    width: 210px;
+    position: relative;
+    margin-top: 20px;
+    float: left;
+    margin-right: 25px;
+}
+.artist-details img{
+    border-radius: 50%;
+}
+.artist-overlays{
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.artist-list-ns{
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    padding: 0 0;
+}
+.heart-icon a{
+    color: white;
+    font-size: 30px;
+    font-weight: normal;
+}
+.artist-overlays .playicon{
+    float: none;
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+    
+}
+.artist-img:hover .artist-overlays{
+    opacity: 1;
+}
+.heart-icon{
+    position: absolute;
+    bottom: 30px;
+    left: 121px;
+}
+.artist-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50px;
+}
+h3.name-artist{
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+h4.follow{
+    font-size: 14px;
+    text-align: center;
+    color: #6A8385;
+}
+.name-artist a{
+    color: #fff;
+    font-weight: bold;
+}
+.name-artist a:hover{
+    color: #009966;
+    text-decoration: none;
+}
+.box-title-select{
+    float: right;
+}
+.box-title-select select{
+    width: 180px;
+    height: 34px;
+    border: 1px solid #fff;
+    color: #999;
+    font-size: 14px;
+    background: #192536;
+    margin-left: 10px;
+}
+ul.pager{
+    margin-top: 20px;
+    margin-bottom:40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.pager li{
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pager li a{
+    color: #fff;
+}
+.pager li.active{
+    background-color: #009966;
+    border-radius: 50%;
+}
+.pager li:hover{
+    background-color: #009966;
+    border-radius: 50%;
+    
+}
